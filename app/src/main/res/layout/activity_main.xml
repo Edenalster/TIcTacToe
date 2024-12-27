@@ -1,0 +1,163 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <!-- Grid for Tic Tac Toe -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="2dp"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="3">
+
+        <!-- Buttons for each cell -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="Top-left cell"
+            android:tag="0"
+            android:textColorLink="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="Top-center cell"
+            android:tag="1"
+            android:textColorLink="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="Top-right cell"
+            android:tag="2"
+            android:textColorLink="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="Middle-left cell"
+            android:tag="3"
+            android:textColorLink="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="Middle-center cell"
+            android:tag="4"
+            android:textColorLink="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="Middle-right cell"
+            android:tag="5"
+            android:textColorLink="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="Bottom-left cell"
+            android:tag="6"
+            android:textColorLink="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="Bottom-center cell"
+            android:tag="7"
+            android:textColorLink="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_background"
+            android:contentDescription="Bottom-right cell"
+            android:tag="8"
+            android:textColorLink="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Player X's Turn"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gridLayout" />
+
+    <!-- Play Again Button -->
+    <Button
+        android:id="@+id/playAgainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background_playagain"
+        android:textColor="#FFFFFF"
+        android:text="Play Again"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/statusTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
